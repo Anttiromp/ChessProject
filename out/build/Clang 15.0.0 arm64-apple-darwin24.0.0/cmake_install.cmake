@@ -1,8 +1,8 @@
-# Install script for directory: /Users/anttiromppainen/Desktop/Chessproject
+# Install script for directory: /Users/anttiromppainen/Desktop/ChessProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/Users/anttiromppainen/Desktop/Chessproject/out/install/Clang 15.0.0 arm64-apple-darwin24.0.0")
+  set(CMAKE_INSTALL_PREFIX "/Users/anttiromppainen/Desktop/ChessProject/out/install/Clang 15.0.0 arm64-apple-darwin24.0.0")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,7 +40,7 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/install_local_manifest.txt"
+  file(WRITE "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

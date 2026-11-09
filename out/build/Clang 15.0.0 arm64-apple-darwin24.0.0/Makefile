@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/anttiromppainen/Desktop/Chessproject
+CMAKE_SOURCE_DIR = /Users/anttiromppainen/Desktop/ChessProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0"
+CMAKE_BINARY_DIR = "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Chessproject
+# Target rules for targets named ChessProject
 
 # Build rule for target.
-Chessproject: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Chessproject
-.PHONY : Chessproject
+ChessProject: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ChessProject
+.PHONY : ChessProject
 
 # fast build rule for target.
-Chessproject/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/build
-.PHONY : Chessproject/fast
+ChessProject/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/build
+.PHONY : ChessProject/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +142,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +150,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Chessproject"
+	@echo "... ChessProject"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

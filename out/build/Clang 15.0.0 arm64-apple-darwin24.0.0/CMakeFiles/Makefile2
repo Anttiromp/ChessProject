@@ -54,20 +54,20 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/anttiromppainen/Desktop/Chessproject
+CMAKE_SOURCE_DIR = /Users/anttiromppainen/Desktop/ChessProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0"
+CMAKE_BINARY_DIR = "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0"
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Chessproject.dir/all
+all: CMakeFiles/ChessProject.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/Chessproject.dir/codegen
+codegen: CMakeFiles/ChessProject.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Chessproject.dir/clean
+clean: CMakeFiles/ChessProject.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Chessproject.dir
+# Target rules for target CMakeFiles/ChessProject.dir
 
 # All Build rule for target.
-CMakeFiles/Chessproject.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" --progress-num=1,2 "Built target Chessproject"
-.PHONY : CMakeFiles/Chessproject.dir/all
+CMakeFiles/ChessProject.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" --progress-num=1,2 "Built target ChessProject"
+.PHONY : CMakeFiles/ChessProject.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Chessproject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Chessproject.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" 0
-.PHONY : CMakeFiles/Chessproject.dir/rule
+CMakeFiles/ChessProject.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/ChessProject.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" 0
+.PHONY : CMakeFiles/ChessProject.dir/rule
 
 # Convenience name for target.
-Chessproject: CMakeFiles/Chessproject.dir/rule
-.PHONY : Chessproject
+ChessProject: CMakeFiles/ChessProject.dir/rule
+.PHONY : ChessProject
 
 # codegen rule for target.
-CMakeFiles/Chessproject.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/anttiromppainen/Desktop/Chessproject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" --progress-num=1,2 "Finished codegen for target Chessproject"
-.PHONY : CMakeFiles/Chessproject.dir/codegen
+CMakeFiles/ChessProject.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" --progress-num=1,2 "Finished codegen for target ChessProject"
+.PHONY : CMakeFiles/ChessProject.dir/codegen
 
 # clean rule for target.
-CMakeFiles/Chessproject.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Chessproject.dir/build.make CMakeFiles/Chessproject.dir/clean
-.PHONY : CMakeFiles/Chessproject.dir/clean
+CMakeFiles/ChessProject.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/clean
+.PHONY : CMakeFiles/ChessProject.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
