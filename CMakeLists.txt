@@ -1,5 +1,16 @@
-cmake_minimum_required(VERSION 3.10.0)
-project(Chessproject VERSION 0.1.0 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.16)
 
-add_executable(Chessproject main.cpp)
+project(ChessProject LANGUAGES CXX)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(SFML 3 COMPONENTS Graphics Window System REQUIRED)
+
+add_executable(ChessProject main.cpp)
+
+target_link_libraries(ChessProject PRIVATE
+    SFML::Graphics
+    SFML::Window
+    SFML::System
+)
