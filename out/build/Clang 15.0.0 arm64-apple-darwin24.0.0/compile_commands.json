@@ -4,5 +4,11 @@
   "command": "/usr/bin/clang++  -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ChessProject.dir/main.cpp.o -c /Users/anttiromppainen/Desktop/ChessProject/main.cpp",
   "file": "/Users/anttiromppainen/Desktop/ChessProject/main.cpp",
   "output": "CMakeFiles/ChessProject.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ChessProject.dir/graphics.cpp.o -c /Users/anttiromppainen/Desktop/ChessProject/graphics.cpp",
+  "file": "/Users/anttiromppainen/Desktop/ChessProject/graphics.cpp",
+  "output": "CMakeFiles/ChessProject.dir/graphics.cpp.o"
 }
 ]

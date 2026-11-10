@@ -1,0 +1,24 @@
+#include <SFML/Graphics.hpp>
+#include "graphics.h"
+
+void displayWindow() {
+        sf::RenderWindow window(
+        sf::VideoMode({800, 600}),
+        "My Chess Project"
+    );
+
+    while (window.isOpen())
+    {
+        while (const std::optional event = window.pollEvent())
+        {
+            if (event->is<sf::Event::Closed>())
+                window.close();
+        }
+
+        window.clear(sf::Color::Black);
+        window.display();
+    }
+
+
+
+}

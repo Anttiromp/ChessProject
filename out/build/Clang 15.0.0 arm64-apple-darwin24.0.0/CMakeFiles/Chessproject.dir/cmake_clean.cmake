@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/ChessProject.dir/graphics.cpp.o"
+  "CMakeFiles/ChessProject.dir/graphics.cpp.o.d"
   "CMakeFiles/ChessProject.dir/main.cpp.o"
   "CMakeFiles/ChessProject.dir/main.cpp.o.d"
   "ChessProject"

@@ -10,7 +10,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(SFML 3 COMPONENTS Graphics Window System REQUIRED)
 
-add_executable(ChessProject main.cpp)
+set(SOURCE_FILES
+    main.cpp
+    graphics.cpp)
+
+add_executable(ChessProject ${SOURCE_FILES})
 
 target_link_libraries(ChessProject PRIVATE
     SFML::Graphics
