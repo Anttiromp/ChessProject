@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Darwin-clang++"
+	BuildStamp="20261110-1131-Experimental"
+	Name="Aino-MacBook-Air.local"
+	Generator="ctest-4.4.5"
+	CompilerName="/usr/bin/clang++"
+	CompilerVersion="17.0.0.17000604"
+	OSName="macOS"
+	Hostname="Aino-MacBook-Air.local"
+	OSRelease="26.5.2"
+	OSVersion="25F84"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="Apple"
+	VendorID="Apple"
+	FamilyID="0"
+	ModelID="0"
+	ModelName="Apple M1"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="3072"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="0.000000"
+	>
+	<Testing>
+		<StartDateTime>Nov 10 12:31 CET</StartDateTime>
+		<StartTestTime>1794310281</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 10 12:31 CET</EndDateTime>
+		<EndTestTime>1794310281</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
