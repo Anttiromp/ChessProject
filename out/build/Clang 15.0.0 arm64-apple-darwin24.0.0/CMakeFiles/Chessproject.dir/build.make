@@ -86,30 +86,30 @@ CMakeFiles/ChessProject.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessProject.dir/src/main.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anttiromppainen/Desktop/ChessProject/src/main.cpp -o CMakeFiles/ChessProject.dir/src/main.cpp.s
 
-CMakeFiles/ChessProject.dir/src/board.cpp.o: CMakeFiles/ChessProject.dir/flags.make
-CMakeFiles/ChessProject.dir/src/board.cpp.o: /Users/anttiromppainen/Desktop/ChessProject/src/board.cpp
-CMakeFiles/ChessProject.dir/src/board.cpp.o: CMakeFiles/ChessProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChessProject.dir/src/board.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessProject.dir/src/board.cpp.o -MF CMakeFiles/ChessProject.dir/src/board.cpp.o.d -o CMakeFiles/ChessProject.dir/src/board.cpp.o -c /Users/anttiromppainen/Desktop/ChessProject/src/board.cpp
+CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o: CMakeFiles/ChessProject.dir/flags.make
+CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o: /Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp
+CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o: CMakeFiles/ChessProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o -MF CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o.d -o CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o -c /Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp
 
-CMakeFiles/ChessProject.dir/src/board.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessProject.dir/src/board.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anttiromppainen/Desktop/ChessProject/src/board.cpp > CMakeFiles/ChessProject.dir/src/board.cpp.i
+CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp > CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.i
 
-CMakeFiles/ChessProject.dir/src/board.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessProject.dir/src/board.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anttiromppainen/Desktop/ChessProject/src/board.cpp -o CMakeFiles/ChessProject.dir/src/board.cpp.s
+CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp -o CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.s
 
 # Object files for target ChessProject
 ChessProject_OBJECTS = \
 "CMakeFiles/ChessProject.dir/src/main.cpp.o" \
-"CMakeFiles/ChessProject.dir/src/board.cpp.o"
+"CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o"
 
 # External object files for target ChessProject
 ChessProject_EXTERNAL_OBJECTS =
 
 ChessProject: CMakeFiles/ChessProject.dir/src/main.cpp.o
-ChessProject: CMakeFiles/ChessProject.dir/src/board.cpp.o
+ChessProject: CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o
 ChessProject: CMakeFiles/ChessProject.dir/build.make
 ChessProject: /opt/homebrew/lib/libsfml-graphics.3.0.2.dylib
 ChessProject: /opt/homebrew/lib/libsfml-window.3.0.2.dylib

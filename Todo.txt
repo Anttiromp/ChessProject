@@ -1,4 +1,14 @@
-Make chessboard     ❌
+CHESSBOARD
+Make renderBoard class      ❌
+1. Draw chessboard          ❌
+2. Draw pieces              ❌
+3. Animate movement         ❌
+4. Highlighs                ❌
+
+
+
+
+
 Pawns               ❌
 Rooks               ❌
 Queens              ❌

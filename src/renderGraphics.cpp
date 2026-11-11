@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
-#include "board.h"
+#ifndef RENDERGRAPHICS_H
+#define RENDERGRAPHICS_H
 
 void displayWindow() {
         sf::RenderWindow window(
@@ -22,3 +23,4 @@ void displayWindow() {
 
 
 }
+#endif

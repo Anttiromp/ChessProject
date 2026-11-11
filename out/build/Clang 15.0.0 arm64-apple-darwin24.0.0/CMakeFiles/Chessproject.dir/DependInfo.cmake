@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/anttiromppainen/Desktop/ChessProject/src/board.cpp" "CMakeFiles/ChessProject.dir/src/board.cpp.o" "gcc" "CMakeFiles/ChessProject.dir/src/board.cpp.o.d"
   "/Users/anttiromppainen/Desktop/ChessProject/src/main.cpp" "CMakeFiles/ChessProject.dir/src/main.cpp.o" "gcc" "CMakeFiles/ChessProject.dir/src/main.cpp.o.d"
+  "/Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp" "CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o" "gcc" "CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

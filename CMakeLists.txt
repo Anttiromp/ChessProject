@@ -12,7 +12,7 @@ find_package(SFML 3 COMPONENTS Graphics Window System REQUIRED)
 
 set(SOURCE_FILES
     src/main.cpp
-    src/board.cpp)
+    src/renderGraphics.cpp)
 
 add_executable(ChessProject ${SOURCE_FILES})
 

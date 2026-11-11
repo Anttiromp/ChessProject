@@ -7,8 +7,8 @@
 },
 {
   "directory": "/Users/anttiromppainen/Desktop/ChessProject/out/build/Clang 15.0.0 arm64-apple-darwin24.0.0",
-  "command": "/usr/bin/clang++  -I/Users/anttiromppainen/Desktop/ChessProject/HeaderFiles -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ChessProject.dir/src/board.cpp.o -c /Users/anttiromppainen/Desktop/ChessProject/src/board.cpp",
-  "file": "/Users/anttiromppainen/Desktop/ChessProject/src/board.cpp",
-  "output": "CMakeFiles/ChessProject.dir/src/board.cpp.o"
+  "command": "/usr/bin/clang++  -I/Users/anttiromppainen/Desktop/ChessProject/HeaderFiles -isystem /opt/homebrew/include -g -std=gnu++17 -arch arm64 -o CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o -c /Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp",
+  "file": "/Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp",
+  "output": "CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o"
 }
 ]
