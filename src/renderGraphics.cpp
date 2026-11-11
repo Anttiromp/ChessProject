@@ -1,30 +1,30 @@
 #include "renderGraphics.h"
 
-void renderBoard::initVariables()
-{
+void renderBoard::initVariables() {
     this->window = nullptr;
 }
 
-void renderBoard::initWindow()
-{
+void renderBoard::initWindow() {
     // TODO videomode erilliseen muuttujaan tsekkaa dokumentaatio
     this->window = new sf::RenderWindow(sf::VideoMode({800, 600}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
+void renderBoard::initObjects() {
+
+}
+
+
 // Constructor & Destructor
-renderBoard::renderBoard()
-{
+renderBoard::renderBoard() {
     this->initVariables();
     this->initWindow();
 }
 
-renderBoard::~renderBoard()
-{
+renderBoard::~renderBoard() {
     delete this->window;
 }
 
-const bool renderBoard::running() const
-{
+const bool renderBoard::running() const {
     return this->window->isOpen();
 }
 
@@ -33,8 +33,7 @@ const bool renderBoard::running() const
 */
 
 // Functions
-void renderBoard::pollEvents()
-{
+void renderBoard::pollEvents() {
     // Event polling
     while (const std::optional event = window->pollEvent() )
     {
@@ -46,13 +45,11 @@ void renderBoard::pollEvents()
     }
 }
 
-void renderBoard::update()
-{
+void renderBoard::update() {
     this->pollEvents();
 }
 
-void renderBoard::render()
-{
+void renderBoard::render() {
     this->window->clear(sf::Color::Black);
 
     this->window->display();

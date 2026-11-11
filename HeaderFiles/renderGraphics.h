@@ -22,7 +22,10 @@ class renderBoard {
     // Private functions
         void initWindow();
         void initVariables();
+        void initObjects();
 
+    // Game objects
+    sf::RectangleShape object;
 
 
     // Constructor & destructor
