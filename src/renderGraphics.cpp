@@ -1,5 +1,7 @@
 #include "renderGraphics.h"
 #include <iostream>
+#include <vector>
+
 
 void renderBoard::initVariables() {
     this -> window = nullptr;
@@ -52,7 +54,7 @@ void renderBoard::pollEvents() {
 void renderBoard::update() {
     this->pollEvents();
 
-    // Test mouse position
+    // TODO make function for this
     std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
