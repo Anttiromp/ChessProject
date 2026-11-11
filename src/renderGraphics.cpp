@@ -1,31 +1,34 @@
 #include "renderGraphics.h"
 
 void renderBoard::initVariables() {
-    this->window = nullptr;
+    this -> window = nullptr;
 }
 
 void renderBoard::initWindow() {
     // TODO videomode erilliseen muuttujaan tsekkaa dokumentaatio
-    this->window = new sf::RenderWindow(sf::VideoMode({800, 600}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
+    this -> window = new sf::RenderWindow(sf::VideoMode({800, 600}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
 void renderBoard::initObjects() {
+    this -> object.setSize(sf::Vector2(100.f, 100.f));
+    this -> object.setFillColor(sf::Color::Cyan);
 
 }
 
 
 // Constructor & Destructor
 renderBoard::renderBoard() {
-    this->initVariables();
-    this->initWindow();
+    this -> initVariables();
+    this -> initObjects();
+    this -> initWindow();
 }
 
 renderBoard::~renderBoard() {
-    delete this->window;
+    delete this -> window;
 }
 
 const bool renderBoard::running() const {
-    return this->window->isOpen();
+    return this -> window -> isOpen();
 }
 
 /*
@@ -35,11 +38,11 @@ const bool renderBoard::running() const {
 // Functions
 void renderBoard::pollEvents() {
     // Event polling
-    while (const std::optional event = window->pollEvent() )
+    while (const std::optional event = window -> pollEvent() )
     {
-        if (event->is<sf::Event::Closed>())
+        if (event -> is <sf::Event::Closed>())
         {
-            window->close();
+            window -> close();
             break;
         }
     }
@@ -50,7 +53,9 @@ void renderBoard::update() {
 }
 
 void renderBoard::render() {
-    this->window->clear(sf::Color::Black);
+    this -> window -> clear(sf::Color::Black);
 
-    this->window->display();
+    this -> window -> draw(this -> object);
+
+    this -> window -> display();
 }
