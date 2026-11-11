@@ -1,8 +1,20 @@
 #include "renderGraphics.h"
+#include <iostream>
 
-int main()
-{
-    displayWindow();
+int main() {
+
+    // Initialize
+    renderBoard renderBoard;
+
+    // Game loop
+    while (renderBoard.running() ) {
+        // Update
+        renderBoard.update();
+
+        // Render
+        renderBoard.render();
+
+    }
 
     return 0;
 }

@@ -1,5 +1,6 @@
 CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o: \
   /Users/anttiromppainen/Desktop/ChessProject/src/renderGraphics.cpp \
+  /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/renderGraphics.h \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
   /opt/homebrew/include/SFML/Graphics/Export.hpp \

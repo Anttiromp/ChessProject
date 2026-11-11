@@ -1,26 +1,47 @@
-#include <SFML/Graphics.hpp>
-#ifndef RENDERGRAPHICS_H
-#define RENDERGRAPHICS_H
+#include "renderGraphics.h"
 
-void displayWindow() {
-        sf::RenderWindow window(
-        sf::VideoMode({800, 600}),
-        "My Chess Project"
-    );
+void renderBoard::initVariables() {
+    this -> window = nullptr;
+}
 
-    while (window.isOpen())
-    {
-        while (const std::optional event = window.pollEvent())
-        {
-            if (event->is<sf::Event::Closed>())
-                window.close();
-        }
+void renderBoard::initWindow() {
+    // TODO videomode erilliseen muuttujaan tsekkaa dokumentaatio
+    this -> window = new sf::RenderWindow(sf::VideoMode({800, 600}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 
-        window.clear(sf::Color::Black);
-        window.display();
-    }
+}
 
+
+// Constructor & Destructor
+renderBoard:: renderBoard() {
+    this -> initVariables();
+    this -> initWindow();
 
 
 }
-#endif
+
+renderBoard::~renderBoard() {
+    delete this->window;
+
+}
+
+const bool renderBoard::running() const{
+    return this -> window -> isOpen();
+}
+
+// Functions
+void renderBoard::pollEvents() {
+
+    // Event polling
+
+    
+}
+
+void renderBoard::update() {
+    this -> pollEvents();
+
+}
+
+void renderBoard::render() {
+
+}
+
