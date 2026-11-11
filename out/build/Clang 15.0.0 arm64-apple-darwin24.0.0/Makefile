@@ -503,53 +503,53 @@ ChessProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/build
 .PHONY : ChessProject/fast
 
-graphics.o: graphics.cpp.o
-.PHONY : graphics.o
+src/board.o: src/board.cpp.o
+.PHONY : src/board.o
 
 # target to build an object file
-graphics.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/graphics.cpp.o
-.PHONY : graphics.cpp.o
+src/board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/board.cpp.o
+.PHONY : src/board.cpp.o
 
-graphics.i: graphics.cpp.i
-.PHONY : graphics.i
+src/board.i: src/board.cpp.i
+.PHONY : src/board.i
 
 # target to preprocess a source file
-graphics.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/graphics.cpp.i
-.PHONY : graphics.cpp.i
+src/board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/board.cpp.i
+.PHONY : src/board.cpp.i
 
-graphics.s: graphics.cpp.s
-.PHONY : graphics.s
+src/board.s: src/board.cpp.s
+.PHONY : src/board.s
 
 # target to generate assembly for a file
-graphics.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/graphics.cpp.s
-.PHONY : graphics.cpp.s
+src/board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/board.cpp.s
+.PHONY : src/board.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -589,12 +589,12 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... ChessProject"
-	@echo "... graphics.o"
-	@echo "... graphics.i"
-	@echo "... graphics.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/board.o"
+	@echo "... src/board.i"
+	@echo "... src/board.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

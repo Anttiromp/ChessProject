@@ -1,0 +1,14 @@
+Make chessboard     ❌
+Pawns               ❌
+Rooks               ❌
+Queens              ❌
+Kings               ❌
+Knights             ❌
+Bishops             ❌
+Make pieces movable ❌
+Capturing logic     ❌
+Castling            ❌
+Promotion           ❌
+Stop illegal moves  ❌
+AI-Bot              ❌
+Eval bar            ❌

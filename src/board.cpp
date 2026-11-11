@@ -1,5 +1,5 @@
 #include <SFML/Graphics.hpp>
-#include "graphics.h"
+#include "board.h"
 
 void displayWindow() {
         sf::RenderWindow window(
