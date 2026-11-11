@@ -53,7 +53,7 @@ void renderBoard::update() {
     this->pollEvents();
 
     // Test mouse position
-    std::cout << "Mouse position: " << sf::Mouse::getPosition().x << " " << sf::Mouse::getPosition().y << '\n';
+    std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
 void renderBoard::render() {
