@@ -1,16 +1,23 @@
-#include "renderGraphics.h"
+#include "graphics.h"
 #include <iostream>
 
-void renderBoard::initVariables() {
+void renderGraphics::initVariables() {
     this -> window = nullptr;
     this -> board = initBoard();
 }
 
-void renderBoard::initWindow() {
+void renderGraphics::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
+/**
+ * @return Vector containing different colored squares 
+ * 
+ * For each step, the loop assigns either a dark or light color on a square, and pushes it to vector containing 
+ * all 64 chess squares. When one rank gets 8 squares assigned, it offsets & swaps the two colors, resulting 
+ * in alternating chess board color scheme.
+ */
 
-std::vector<sf::RectangleShape> renderBoard::initBoard() {
+std::vector<sf::RectangleShape> renderGraphics::initBoard() {
     std::vector<sf::RectangleShape> board;
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
@@ -49,23 +56,23 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
 
 
 // Constructors & Destructor
-renderBoard::renderBoard() {
+renderGraphics::renderGraphics() {
     this -> initVariables();
     this -> initBoard();
     this -> initWindow();
 }
 
-renderBoard::~renderBoard() {
+renderGraphics::~renderGraphics() {
     delete this -> window;
 }
 
-const bool renderBoard::running() const {
+const bool renderGraphics::running() const {
     return this -> window -> isOpen();
 }
 
 
 // Functions
-void renderBoard::pollEvents() {
+void renderGraphics::pollEvents() {
     // Event polling
     while (const std::optional event = window -> pollEvent() )
     {
@@ -77,19 +84,23 @@ void renderBoard::pollEvents() {
     }
 }
 
-void renderBoard::update() {
+void renderGraphics::update() {
     this->pollEvents();
 
     // Test mouse position TODO POISTA KUNHAN SAADAAN KLIKSUTTELU TOIMICAKS
     std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
-void renderBoard::render() {
-    this -> window -> clear(sf::Color::Black);
-
+void renderGraphics::renderBoard() {
     for (int i {0}; i < board.size(); i++) {
         this -> window -> draw(board[i]);
     }
+}
+
+void renderGraphics::render() {
+    this -> window -> clear(sf::Color::Black);
+
+    this -> renderBoard();
 
     this -> window -> display();
 }

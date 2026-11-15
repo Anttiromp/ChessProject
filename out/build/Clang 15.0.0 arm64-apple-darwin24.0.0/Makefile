@@ -503,6 +503,30 @@ ChessProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/build
 .PHONY : ChessProject/fast
 
+src/graphics.o: src/graphics.cpp.o
+.PHONY : src/graphics.o
+
+# target to build an object file
+src/graphics.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/graphics.cpp.o
+.PHONY : src/graphics.cpp.o
+
+src/graphics.i: src/graphics.cpp.i
+.PHONY : src/graphics.i
+
+# target to preprocess a source file
+src/graphics.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/graphics.cpp.i
+.PHONY : src/graphics.cpp.i
+
+src/graphics.s: src/graphics.cpp.s
+.PHONY : src/graphics.s
+
+# target to generate assembly for a file
+src/graphics.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/graphics.cpp.s
+.PHONY : src/graphics.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -526,30 +550,6 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-src/renderGraphics.o: src/renderGraphics.cpp.o
-.PHONY : src/renderGraphics.o
-
-# target to build an object file
-src/renderGraphics.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.o
-.PHONY : src/renderGraphics.cpp.o
-
-src/renderGraphics.i: src/renderGraphics.cpp.i
-.PHONY : src/renderGraphics.i
-
-# target to preprocess a source file
-src/renderGraphics.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.i
-.PHONY : src/renderGraphics.cpp.i
-
-src/renderGraphics.s: src/renderGraphics.cpp.s
-.PHONY : src/renderGraphics.s
-
-# target to generate assembly for a file
-src/renderGraphics.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/renderGraphics.cpp.s
-.PHONY : src/renderGraphics.cpp.s
 
 # Help Target
 help:
@@ -589,12 +589,12 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... ChessProject"
+	@echo "... src/graphics.o"
+	@echo "... src/graphics.i"
+	@echo "... src/graphics.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/renderGraphics.o"
-	@echo "... src/renderGraphics.i"
-	@echo "... src/renderGraphics.s"
 .PHONY : help
 
 
