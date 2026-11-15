@@ -7,12 +7,26 @@ void renderBoard::initVariables() {
 
 void renderBoard::initWindow() {
     // TODO videomode erilliseen muuttujaan tsekkaa dokumentaatio
-    this -> window = new sf::RenderWindow(sf::VideoMode({800, 600}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
+    this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
-void renderBoard::initObjects() {
-    this -> object.setSize(sf::Vector2(100.f, 100.f));
-    this -> object.setFillColor(sf::Color::Cyan);
+void renderBoard::initBoard() {
+    float squareOffset {87.5};
+    this -> square.setSize(sf::Vector2(87.5f, 87.5f));
+
+    float rank {};
+    float file{};
+    for (int i {0}; i <= 2; i++) {
+        this -> square.setPosition(sf::Vector2f(rank, file));
+        if (i % 2 != 0) {
+            this -> square.setFillColor(sf::Color::Red);
+        } else {
+            this -> square.setFillColor(sf::Color::Cyan);
+        }
+        file += squareOffset;
+
+    }
+
 
 }
 
@@ -20,7 +34,7 @@ void renderBoard::initObjects() {
 // Constructor & Destructor
 renderBoard::renderBoard() {
     this -> initVariables();
-    this -> initObjects();
+    this -> initBoard();
     this -> initWindow();
 }
 
@@ -59,7 +73,7 @@ void renderBoard::update() {
 void renderBoard::render() {
     this -> window -> clear(sf::Color::Black);
 
-    this -> window -> draw(this -> object);
+    this -> window -> draw(this -> square);
 
     this -> window -> display();
 }
