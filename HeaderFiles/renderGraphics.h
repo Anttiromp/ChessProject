@@ -17,7 +17,7 @@ class renderBoard {
         sf::RenderWindow* window;
         // TODO videoMode variable
         std::optional<sf::Event> event;
-        std::vector<sf::RectangleShape> board;
+        std::vector<sf::RectangleShape> board; // TODO tämän koko tiedetään alusta alkaen, voidaan laittaa maksimikokoon 
 
 
     // Private functions

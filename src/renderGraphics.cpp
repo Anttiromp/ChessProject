@@ -7,7 +7,6 @@ void renderBoard::initVariables() {
 }
 
 void renderBoard::initWindow() {
-    // TODO videomode erilliseen muuttujaan tsekkaa dokumentaatio
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
@@ -15,11 +14,12 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
     std::vector<sf::RectangleShape> board;
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
+
     auto darkSquare = sf::Color{181, 136, 99};
     auto lightSquare = sf::Color{240, 217, 181};
 
     float rank {};
-    float file{};
+    float file {};
 
     // Loop through all squares & altering color pattern
     for (int i {1}; i <= 64; i++) {
@@ -35,10 +35,11 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
         }
         
 
-        // Offset rank when file is full
+        // Offset rank when file is full & flip color scheme
         if (i % 8 == 0) {
             rank += squareOffset;
             file = 0;
+            std::swap(darkSquare, lightSquare);
         }
     }
 
@@ -47,7 +48,7 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
 }
 
 
-// Constructor & Destructor
+// Constructors & Destructor
 renderBoard::renderBoard() {
     this -> initVariables();
     this -> initBoard();
@@ -62,9 +63,6 @@ const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
 
-/*
-    while (const std::optional event = window->pollEvent())
-*/
 
 // Functions
 void renderBoard::pollEvents() {
@@ -82,7 +80,7 @@ void renderBoard::pollEvents() {
 void renderBoard::update() {
     this->pollEvents();
 
-    // Test mouse position
+    // Test mouse position TODO POISTA KUNHAN SAADAAN KLIKSUTTELU TOIMICAKS
     std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
@@ -91,7 +89,6 @@ void renderBoard::render() {
 
     for (int i {0}; i < board.size(); i++) {
         this -> window -> draw(board[i]);
-        this -> window -> display(); // DEBUG
     }
 
     this -> window -> display();
