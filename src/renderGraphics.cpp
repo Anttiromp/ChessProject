@@ -17,36 +17,27 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
 
     float rank {};
-    float file{};
+    
 
     for (int i {1}; i <= 8; i++) {
-        this -> square.setPosition(sf::Vector2f(file, rank));
-        if (i % 2 == 0) {
-            this -> square.setFillColor(sf::Color::Red);
-            board.push_back(square);
-            file += squareOffset;
-            continue;
+        float file{};
+        for (int j {1}; j <= 8; j++) {
+            this -> square.setPosition(sf::Vector2f(file, rank));
+            if (j % 2 == 0 && i % 2 != 0) {
+                this -> square.setFillColor(sf::Color::Red);
+                board.push_back(square);
+                file += squareOffset;
+                continue;
         }
         this -> square.setFillColor(sf::Color::Cyan);
         board.push_back(square);
         file += squareOffset;
+        }
+        rank += squareOffset;
     }
 
     return board;
 }
-
-
-/*
-std::vector<sf::RectangleShape> renderBoard::initBoard() {
-    float squareOffset {87.5};
-    this -> square.setSize(sf::Vector2(87.5f, 87.5f));
-    std::vector<sf::RectangleShape> board;
-
-    float rank {};
-    float file{};
-    return board;
-}
-    */
 
 
 // Constructor & Destructor
@@ -93,6 +84,7 @@ void renderBoard::render() {
 
     for (int i {0}; i < board.size(); i++) {
         this -> window -> draw(board[i]);
+      //  this -> window -> display(); // DEBUG
     }
 
     this -> window -> display();
