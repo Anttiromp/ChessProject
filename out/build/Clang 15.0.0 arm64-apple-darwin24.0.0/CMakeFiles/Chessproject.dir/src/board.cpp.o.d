@@ -1,5 +1,6 @@
 CMakeFiles/ChessProject.dir/src/board.cpp.o: \
   /Users/anttiromppainen/Desktop/ChessProject/src/board.cpp \
+  /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/board.h \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
   /opt/homebrew/include/SFML/Graphics/Export.hpp \
@@ -893,4 +894,5 @@ CMakeFiles/ChessProject.dir/src/board.cpp.o: \
   /opt/homebrew/include/SFML/System/FileInputStream.hpp \
   /opt/homebrew/include/SFML/System/InputStream.hpp \
   /opt/homebrew/include/SFML/System/MemoryInputStream.hpp \
-  /opt/homebrew/include/SFML/System/Sleep.hpp
+  /opt/homebrew/include/SFML/System/Sleep.hpp \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream
