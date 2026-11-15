@@ -1,5 +1,5 @@
-#ifndef GRAPHICS_H
-#define GRAPHICS_H
+#ifndef BOARD_H
+#define BOARD_H
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
@@ -10,7 +10,7 @@
     TODO
 */
 
-class renderGraphics {
+class renderBoard {
 
     private:
     // Variables
@@ -31,8 +31,8 @@ class renderGraphics {
 
     // Constructor & destructor
     public:
-        renderGraphics();
-        virtual ~renderGraphics();
+        renderBoard();
+        virtual ~renderBoard();
 
     // Accessors
     const bool running() const;
@@ -41,7 +41,7 @@ class renderGraphics {
     void pollEvents();
     void update();
     void render();
-    void renderBoard();
+    void drawSquares();
 
 };
 

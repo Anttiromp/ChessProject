@@ -1,18 +1,18 @@
-#include "graphics.h"
+#include "board.h"
 #include <iostream>
 
 int main() {
 
     // Initialize
-    renderGraphics renderGraphics;
+    renderBoard board;
 
     // Game loop
-    while (renderGraphics.running() ) {
+    while (board.running() ) {
         // Update
-        renderGraphics.update();
+        board.update();
 
         // Render
-        renderGraphics.render();
+        board.render();
 
     }
 

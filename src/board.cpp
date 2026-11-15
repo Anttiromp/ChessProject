@@ -1,12 +1,12 @@
-#include "graphics.h"
+#include "board.h"
 #include <iostream>
 
-void renderGraphics::initVariables() {
+void renderBoard::initVariables() {
     this -> window = nullptr;
     this -> board = initBoard();
 }
 
-void renderGraphics::initWindow() {
+void renderBoard::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 /**
@@ -17,7 +17,7 @@ void renderGraphics::initWindow() {
  * in alternating chess board color scheme.
  */
 
-std::vector<sf::RectangleShape> renderGraphics::initBoard() {
+std::vector<sf::RectangleShape> renderBoard::initBoard() {
     std::vector<sf::RectangleShape> board;
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
@@ -56,23 +56,23 @@ std::vector<sf::RectangleShape> renderGraphics::initBoard() {
 
 
 // Constructors & Destructor
-renderGraphics::renderGraphics() {
+renderBoard::renderBoard() {
     this -> initVariables();
     this -> initBoard();
     this -> initWindow();
 }
 
-renderGraphics::~renderGraphics() {
+renderBoard::~renderBoard() {
     delete this -> window;
 }
 
-const bool renderGraphics::running() const {
+const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
 
 
 // Functions
-void renderGraphics::pollEvents() {
+void renderBoard::pollEvents() {
     // Event polling
     while (const std::optional event = window -> pollEvent() )
     {
@@ -84,23 +84,23 @@ void renderGraphics::pollEvents() {
     }
 }
 
-void renderGraphics::update() {
+void renderBoard::update() {
     this->pollEvents();
 
     // Test mouse position TODO POISTA KUNHAN SAADAAN KLIKSUTTELU TOIMICAKS
     std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
-void renderGraphics::renderBoard() {
+void renderBoard::drawSquares() {
     for (int i {0}; i < board.size(); i++) {
         this -> window -> draw(board[i]);
     }
 }
 
-void renderGraphics::render() {
+void renderBoard::render() {
     this -> window -> clear(sf::Color::Black);
 
-    this -> renderBoard();
+    this -> drawSquares();
 
     this -> window -> display();
 }
