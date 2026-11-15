@@ -3,6 +3,7 @@
 
 void renderBoard::initVariables() {
     this -> window = nullptr;
+    this -> board = initBoard();
 }
 
 void renderBoard::initWindow() {
@@ -10,25 +11,42 @@ void renderBoard::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
-void renderBoard::initBoard() {
+std::vector<sf::RectangleShape> renderBoard::initBoard() {
+    std::vector<sf::RectangleShape> board;
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
 
     float rank {};
     float file{};
-    for (int i {0}; i <= 2; i++) {
-        this -> square.setPosition(sf::Vector2f(rank, file));
-        if (i % 2 != 0) {
-            this -> square.setFillColor(sf::Color::Red);
-        } else {
-            this -> square.setFillColor(sf::Color::Cyan);
-        }
-        file += squareOffset;
 
+    for (int i {1}; i <= 8; i++) {
+        this -> square.setPosition(sf::Vector2f(file, rank));
+        if (i % 2 == 0) {
+            this -> square.setFillColor(sf::Color::Red);
+            board.push_back(square);
+            file += squareOffset;
+            continue;
+        }
+        this -> square.setFillColor(sf::Color::Cyan);
+        board.push_back(square);
+        file += squareOffset;
     }
 
-
+    return board;
 }
+
+
+/*
+std::vector<sf::RectangleShape> renderBoard::initBoard() {
+    float squareOffset {87.5};
+    this -> square.setSize(sf::Vector2(87.5f, 87.5f));
+    std::vector<sf::RectangleShape> board;
+
+    float rank {};
+    float file{};
+    return board;
+}
+    */
 
 
 // Constructor & Destructor
@@ -73,7 +91,9 @@ void renderBoard::update() {
 void renderBoard::render() {
     this -> window -> clear(sf::Color::Black);
 
-    this -> window -> draw(this -> square);
+    for (int i {0}; i < board.size(); i++) {
+        this -> window -> draw(board[i]);
+    }
 
     this -> window -> display();
 }

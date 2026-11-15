@@ -17,12 +17,13 @@ class renderBoard {
         sf::RenderWindow* window;
         // TODO videoMode variable
         std::optional<sf::Event> event;
+        std::vector<sf::RectangleShape> board;
 
 
     // Private functions
         void initWindow();
         void initVariables();
-        void initBoard();
+        std::vector<sf::RectangleShape> initBoard();
 
     // Game objects
     sf::RectangleShape square;
