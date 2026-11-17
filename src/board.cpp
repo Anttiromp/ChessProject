@@ -80,9 +80,10 @@ const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
 
+// TODO tämä palauttaa jotenkin väärän arvon meille, sen takia se neliö häviää ruudulta
+// Huomen fiksaus
 sf::Vector2f renderBoard::getMousePosition() {
     sf::Vector2 iPosition = sf::Vector2i(sf::Mouse::getPosition());
-//sf::Vector2i intPos = static_cast<sf::Vector2i>(pos);
 
     return static_cast<sf::Vector2f> (iPosition);
 }
@@ -100,12 +101,14 @@ void renderBoard::pollEvents() {
         }
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-            piece.setPosition(mousePos);
+       //     piece.setPosition(mousePos);
          //   sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-         std::cout << "I'm here\n";
+         std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
         }
     }
 }
+
+
 
 void renderBoard::update() {
     this->pollEvents();
