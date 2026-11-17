@@ -18,16 +18,18 @@ class renderBoard {
         // TODO videoMode variable
         std::optional<sf::Event> event;
         std::vector<sf::RectangleShape> board; // TODO tämän koko tiedetään alusta alkaen, voidaan laittaa maksimikokoon 
-
+        
 
     // Private functions
         void initWindow();
         void initVariables();
+        sf::RectangleShape initPiece(); // TODO MOVE TO OWN CLASS
         std::vector<sf::RectangleShape> initBoard();
 
     // Game objects
     sf::RectangleShape square;
-
+    sf::RectangleShape piece;
+    
 
     // Constructor & destructor
     public:
@@ -36,12 +38,12 @@ class renderBoard {
 
     // Accessors
     const bool running() const;
-
     // Functions
     void pollEvents();
     void update();
     void render();
     void drawSquares();
+    void drawPiece(); // TODO NOT A PART OF BOARD
 
 };
 

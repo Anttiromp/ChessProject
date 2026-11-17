@@ -4,6 +4,7 @@
 void renderBoard::initVariables() {
     this -> window = nullptr;
     this -> board = initBoard();
+    this -> piece = initPiece();
 }
 
 void renderBoard::initWindow() {
@@ -18,7 +19,7 @@ void renderBoard::initWindow() {
  */
 
 std::vector<sf::RectangleShape> renderBoard::initBoard() {
-    std::vector<sf::RectangleShape> board;
+    std::vector<sf::RectangleShape> board; // TODO looks funky, compare to initWindow
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
 
@@ -41,7 +42,6 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
             file += squareOffset;
         }
         
-
         // Offset rank when file is full & flip color scheme
         if (i % 8 == 0) {
             rank += squareOffset;
@@ -50,16 +50,25 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
         }
     }
 
-
     return board;
 }
 
+// TODO NOT A PART OF THE BOARD
+sf::RectangleShape renderBoard::initPiece() {
+
+    sf::RectangleShape piece;
+    piece.setFillColor(sf::Color::Green);
+    piece.setSize(sf::Vector2(87.5f, 87.5f));
+    
+    return piece;
+    
+}
 
 // Constructors & Destructor
 renderBoard::renderBoard() {
     this -> initVariables();
-    this -> initBoard();
     this -> initWindow();
+    this -> initPiece();
 }
 
 renderBoard::~renderBoard() {
@@ -69,6 +78,7 @@ renderBoard::~renderBoard() {
 const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
+
 
 
 // Functions
@@ -81,6 +91,11 @@ void renderBoard::pollEvents() {
             window -> close();
             break;
         }
+
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+         //   sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
+         std::cout << "I'm here\n";
+        }
     }
 }
 
@@ -88,7 +103,7 @@ void renderBoard::update() {
     this->pollEvents();
 
     // Test mouse position TODO POISTA KUNHAN SAADAAN KLIKSUTTELU TOIMICAKS
-    std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
+ //   std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
 void renderBoard::drawSquares() {
@@ -97,10 +112,18 @@ void renderBoard::drawSquares() {
     }
 }
 
+void renderBoard::drawPiece() {
+    this -> window->draw(piece);
+
+}
+
+
 void renderBoard::render() {
     this -> window -> clear(sf::Color::Black);
 
     this -> drawSquares();
+
+    this -> drawPiece();
 
     this -> window -> display();
 }
