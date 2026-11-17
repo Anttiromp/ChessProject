@@ -80,8 +80,11 @@ const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
 
-sf::Vector2i renderBoard::getMousePosition() {
-    return sf::Vector2i(sf::Mouse::getPosition());
+sf::Vector2f renderBoard::getMousePosition() {
+    sf::Vector2 iPosition = sf::Vector2i(sf::Mouse::getPosition());
+//sf::Vector2i intPos = static_cast<sf::Vector2i>(pos);
+
+    return static_cast<sf::Vector2f> (iPosition);
 }
 
 
@@ -97,6 +100,7 @@ void renderBoard::pollEvents() {
         }
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            piece.setPosition(mousePos);
          //   sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
          std::cout << "I'm here\n";
         }
