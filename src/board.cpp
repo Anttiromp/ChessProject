@@ -5,6 +5,7 @@ void renderBoard::initVariables() {
     this -> window = nullptr;
     this -> board = initBoard();
     this -> piece = initPiece();
+    this -> mousePos = getMousePosition();
 }
 
 void renderBoard::initWindow() {
@@ -79,6 +80,9 @@ const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
 
+sf::Vector2i renderBoard::getMousePosition() {
+    return sf::Vector2i(sf::Mouse::getPosition());
+}
 
 
 // Functions
