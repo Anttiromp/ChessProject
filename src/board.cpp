@@ -98,10 +98,12 @@ void renderBoard::pollEvents() {
         }
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            piece.setPosition(mousePosView);
 
-            std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << sf::Mouse::getPosition(*this -> window).y << '\n';
-            /*
+            std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
+            
             std::cout << "Mouse position: " << mousePosView.x << mousePosView.y << "\n";
+            /*
             piece.setPosition(mousePosView);
             */
         }
@@ -112,9 +114,8 @@ void renderBoard::pollEvents() {
 
 void renderBoard::update() {
     this->pollEvents();
+    this -> getMousePosition();
 
-    // Test mouse position TODO POISTA KUNHAN SAADAAN KLIKSUTTELU TOIMICAKS
- //   std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
 }
 
 void renderBoard::drawSquares() {
