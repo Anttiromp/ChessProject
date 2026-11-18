@@ -100,12 +100,6 @@ void renderBoard::pollEvents() {
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
             piece.setPosition(mousePosView);
 
-            std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
-            
-            std::cout << "Mouse position: " << mousePosView.x << mousePosView.y << "\n";
-            /*
-            piece.setPosition(mousePosView);
-            */
         }
     }
 }
@@ -114,7 +108,7 @@ void renderBoard::pollEvents() {
 
 void renderBoard::update() {
     this->pollEvents();
-    this -> getMousePosition();
+//    this -> getMousePosition();
 
 }
 
@@ -129,6 +123,15 @@ void renderBoard::drawPiece() {
 
 }
 
+void renderBoard::movePiece() {
+    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+        getMousePosition();
+        if (this -> piece.getGlobalBounds().contains(this -> mousePosView)) {
+            this -> piece.setPosition(mousePosView);
+        }
+    }
+}
+
 
 void renderBoard::render() {
     this -> window -> clear(sf::Color::Black);
@@ -136,6 +139,8 @@ void renderBoard::render() {
     this -> drawSquares();
 
     this -> drawPiece();
+
+    this -> movePiece();
 
     this -> window -> display();
 }
