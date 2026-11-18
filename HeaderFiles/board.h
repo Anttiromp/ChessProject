@@ -18,7 +18,10 @@ class renderBoard {
         // TODO videoMode variable
         std::optional<sf::Event> event;
         std::vector<sf::RectangleShape> board; // TODO tämän koko tiedetään alusta alkaen, voidaan laittaa maksimikokoon 
-        sf::Vector2f mousePos;
+        
+    // Mouse position variables
+    sf::Vector2i mousePosWindow;
+    sf::Vector2f mousePosView;
 
     // Private functions
         void initWindow();
@@ -44,7 +47,7 @@ class renderBoard {
     void render();
     void drawSquares();
     void drawPiece(); // TODO NOT A PART OF BOARD
-    sf::Vector2f getMousePosition();
+    void getMousePosition();
 
 };
 

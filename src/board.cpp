@@ -5,7 +5,6 @@ void renderBoard::initVariables() {
     this -> window = nullptr;
     this -> board = initBoard();
     this -> piece = initPiece();
-    this -> mousePos = getMousePosition();
 }
 
 void renderBoard::initWindow() {
@@ -80,12 +79,10 @@ const bool renderBoard::running() const {
     return this -> window -> isOpen();
 }
 
-// TODO tämä palauttaa jotenkin väärän arvon meille, sen takia se neliö häviää ruudulta
-// Huomen fiksaus
-sf::Vector2f renderBoard::getMousePosition() {
-    sf::Vector2 iPosition = sf::Vector2i(sf::Mouse::getPosition());
 
-    return static_cast<sf::Vector2f> (iPosition);
+void renderBoard::getMousePosition() {
+    this -> mousePosWindow = sf::Mouse::getPosition(*this -> window);
+    this -> mousePosView = this -> window -> mapPixelToCoords(this -> mousePosWindow);
 }
 
 
@@ -101,9 +98,12 @@ void renderBoard::pollEvents() {
         }
 
         if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-       //     piece.setPosition(mousePos);
-         //   sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-         std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << " " << sf::Mouse::getPosition(*this -> window).y << '\n';
+
+            std::cout << "Mouse position: " << sf::Mouse::getPosition(*this -> window).x << sf::Mouse::getPosition(*this -> window).y << '\n';
+            /*
+            std::cout << "Mouse position: " << mousePosView.x << mousePosView.y << "\n";
+            piece.setPosition(mousePosView);
+            */
         }
     }
 }
