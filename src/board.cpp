@@ -97,18 +97,16 @@ void renderBoard::pollEvents() {
             break;
         }
 
-        if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-            piece.setPosition(mousePosView);
 
         }
     }
-}
+
 
 
 
 void renderBoard::update() {
     this->pollEvents();
-//    this -> getMousePosition();
+    this -> getMousePosition();
 
 }
 
@@ -125,10 +123,12 @@ void renderBoard::drawPiece() {
 
 void renderBoard::movePiece() {
     if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        getMousePosition();
+        this -> piece.setPosition(mousePosView);
+        /*
         if (this -> piece.getGlobalBounds().contains(this -> mousePosView)) {
             this -> piece.setPosition(mousePosView);
         }
+            */
     }
 }
 
