@@ -42,7 +42,7 @@ class renderGraphics{
     void render();
   //  void drawSquares();
     // TODO Might need to be on their on class?
-    void drawPiece(); // TODO NOT A PART OF BOARD
+    void drawPiece();
     sf::RectangleShape getPiece();
 
 };

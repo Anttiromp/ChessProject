@@ -14,6 +14,7 @@ private:
 
 // Private functions 
     void initWindow();
+    
 
 
 public:
@@ -25,6 +26,7 @@ public:
     void pollEvents();
     void getMousePosition();
     void update();
+    sf::RenderWindow& getWindow();
    // void movePiece();
 };
 

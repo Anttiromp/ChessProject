@@ -1,4 +1,5 @@
 #include "renderGraphics.h"
+#include "gameController.h"
 #include <iostream>
 
 void renderGraphics::initVariables() {
@@ -78,22 +79,24 @@ void renderBoard::drawSquares() {
         this -> window -> draw(board[i]);
     }
 }
+*/
 
-void renderBoard::drawPiece() {
-    this -> window->draw(piece);
+gameController game;
+
+void renderGraphics::drawPiece() {
+    game.getWindow().draw(piece);
+ //   game.getWindow() ->draw(piece);
 
 }
-    */
 
 
 
 void renderGraphics::render() {
-//    this -> window -> clear(sf::Color::Black);
+    game.getWindow().clear(sf::Color::Black);
 
 //    this -> drawSquares();
 
 //    this -> drawPiece();
 
-
-//    this -> window -> display();
+ //   game.getWindow().display();
 }

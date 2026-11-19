@@ -14,7 +14,7 @@ int main() {
         game.update();
 
         // Render
-        graphics.render();
+      //  graphics.render();
 
     }
 

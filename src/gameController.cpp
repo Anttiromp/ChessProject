@@ -1,4 +1,5 @@
 #include "gameController.h"
+#include "renderGraphics.h"
 
 /*
 Game / Controller
@@ -19,6 +20,10 @@ TODO
 
 void gameController::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
+}
+
+sf::RenderWindow& gameController::getWindow() {
+    return *this -> window;
 }
 
 const bool gameController::running() const {
@@ -59,9 +64,15 @@ void gameController::movePiece() {
 }
     */
 
+renderGraphics graphics;
 
 void gameController::update() {
+    this -> window -> clear(sf::Color::Black);
+
     this->pollEvents();
     this -> getMousePosition();
+    graphics.drawPiece();
+
+    this -> window -> display();
 
 }
