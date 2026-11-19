@@ -1,30 +1,12 @@
 #include "gameController.h"
 #include "renderGraphics.h"
 
-/*
-Game / Controller
 
-Responsibilities:
-- Run the main game loop.
-- Forward relevant player input to the board.
-- Tell the renderer when to draw the current game state.
-- Manage the overall game lifecycle.
-
-
-TODO
-2. Testiks yks neliö tähän ikkunaan, pastaa raahaustoiminto
-3. graphics.cpp siihen malliin et saadaan lauta pöydälle
-4. Board.cpp:stä ei tarvi viel toistaseks välittää
-
-*/
 
 void gameController::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
-sf::RenderWindow& gameController::getWindow() {
-    return *this->window;
-}
 
 
 const bool gameController::running() const {

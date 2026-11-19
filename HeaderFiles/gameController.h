@@ -19,11 +19,14 @@ private:
 
 
 public:
+    // Variables
+
+
+    // Functions
     gameController(/* args */);
     ~gameController();
-
+    
     const bool running() const;
-    sf::RenderWindow& getWindow();
 
     void pollEvents();
     void getMousePosition();

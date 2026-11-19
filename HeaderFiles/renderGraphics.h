@@ -39,8 +39,8 @@ class renderGraphics{
     // Functions
     
  //   void update();
-    void render(sf::RenderWindow&);
-    void drawSquares(sf::RenderWindow&);
+    void render();
+    void drawSquares();
     // TODO Might need to be on their on class?
     sf::RectangleShape getPiece();
 

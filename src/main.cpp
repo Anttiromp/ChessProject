@@ -9,7 +9,6 @@ int main() {
     renderGraphics graphics;
     gameController game;
 
-    sf::RenderWindow& window = game.getWindow();
 
     // Game loop
     while (game.running() ) {
@@ -17,7 +16,7 @@ int main() {
         game.update();
 
         // Render
-        graphics.render(window);
+        graphics.render();
 
     }
 

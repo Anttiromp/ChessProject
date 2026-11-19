@@ -18,7 +18,7 @@ void renderGraphics::initVariables() {
  */
 
 std::vector<sf::RectangleShape> renderGraphics::initBoard() {
-    std::vector<sf::RectangleShape> board; // TODO looks funky, compare to initWindow
+    std::vector<sf::RectangleShape> board;
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
 
@@ -73,18 +73,19 @@ renderGraphics::~renderGraphics() {
 }
 
 
-
+/*
 void renderGraphics::drawSquares(sf::RenderWindow& window) {
     for (int i {0}; i < board.size(); i++) {
         window.draw(board[i]);
     }
 }
+    */
 
 
 
-void renderGraphics::render(sf::RenderWindow& window) {
+void renderGraphics::render() {
 
-    this -> drawSquares(window);
+   //this -> drawSquares(window);
 
 //    this -> drawPiece();
 
