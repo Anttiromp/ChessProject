@@ -2,37 +2,51 @@
 #include "renderGraphics.h"
 
 
-
+/*
 void gameController::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
+    */
 
 
 
 const bool gameController::running() const {
-    return this -> window -> isOpen();
+    return window.isOpen();
+
 }
+
+gameController::gameController() 
+    : window(sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close)),
+    renderer(window)
+    {
+
+    }
+
+/*
+
 
 gameController::gameController() {
     this -> initWindow();
 }
+    */
+
 
 gameController::~gameController() {
-    delete this -> window;
+    window.close();
 }
 
 void gameController::getMousePosition() {
-    this -> mousePosWindow = sf::Mouse::getPosition(*this -> window);
-    this -> mousePosView = this -> window -> mapPixelToCoords(this -> mousePosWindow);
+ //   this -> mousePosWindow = sf::Mouse::getPosition(*this -> window);
+  //  this -> mousePosView = this -> window -> mapPixelToCoords(this -> mousePosWindow);
 }
 
 
 // Functions
 void gameController::pollEvents() {
     // Event polling
-    while (const std::optional event = window -> pollEvent() ) {
+    while (const std::optional event = window.pollEvent() ) {
         if (event -> is <sf::Event::Closed>()) {
-            window -> close();
+            window.close();
             break;
         }
 
@@ -47,15 +61,15 @@ void gameController::movePiece() {
 }
     */
 
-renderGraphics graphics;
 
 void gameController::update() {
-    this -> window -> clear(sf::Color::Black);
+    window.clear(sf::Color::Black);
+    renderer.render();
 
     this -> pollEvents();
     this -> getMousePosition();
 
 
-    this -> window -> display();
+    window.display();
 
 }

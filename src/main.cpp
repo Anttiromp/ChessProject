@@ -6,7 +6,6 @@
 int main() {
 
     // Initialize
-    renderGraphics graphics;
     gameController game;
 
 
@@ -14,9 +13,6 @@ int main() {
     while (game.running() ) {
         // Update
         game.update();
-
-        // Render
-        graphics.render();
 
     }
 

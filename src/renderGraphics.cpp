@@ -63,29 +63,34 @@ sf::RectangleShape renderGraphics::initPiece() {
     
 }
 
+renderGraphics::renderGraphics(sf::RenderWindow& window)
+    : window(window) {
+        // Other intialize stuff here
+}
+/*
 // Constructors & Destructor
-renderGraphics::renderGraphics() {
+renderGraphics::renderGraphics(sf::RenderWindow& window) {
+    : window (window);
     this -> initVariables();
     this -> initPiece();
 }
+    */
 
 renderGraphics::~renderGraphics() {
 }
 
 
-/*
-void renderGraphics::drawSquares(sf::RenderWindow& window) {
+void renderGraphics::drawSquares() {
     for (int i {0}; i < board.size(); i++) {
         window.draw(board[i]);
     }
 }
-    */
 
 
 
 void renderGraphics::render() {
 
-   //this -> drawSquares(window);
+   this -> drawSquares();
 
 //    this -> drawPiece();
 

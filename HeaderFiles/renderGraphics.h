@@ -15,7 +15,7 @@ class renderGraphics{
     private:
     // Variables
     std::vector<sf::RectangleShape> board; // TODO tämän koko tiedetään alusta alkaen, voidaan laittaa maksimikokoon 
-        
+    sf::RenderWindow& window; 
     
 
     // Private functions
@@ -31,7 +31,7 @@ class renderGraphics{
 
     // Constructor & destructor
     public:
-        renderGraphics();
+        renderGraphics(sf::RenderWindow& window);
         virtual ~renderGraphics();
 
     // Accessors
