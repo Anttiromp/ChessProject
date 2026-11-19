@@ -4,16 +4,13 @@
 Game / Controller
 
 Responsibilities:
-- Create and own the SFML window.
 - Run the main game loop.
-- Handle SFML events (keyboard, mouse, closing the window).
 - Forward relevant player input to the board.
 - Tell the renderer when to draw the current game state.
 - Manage the overall game lifecycle.
 
 
 TODO
-1. Tämä siihen kuntoon et voidaan avata ja sulkea ikkuna (vain ja ainoastaan täältä)
 2. Testiks yks neliö tähän ikkunaan, pastaa raahaustoiminto
 3. graphics.cpp siihen malliin et saadaan lauta pöydälle
 4. Board.cpp:stä ei tarvi viel toistaseks välittää

@@ -819,7 +819,7 @@ CMakeFiles/ChessProject.dir/src/board.cpp.o: /Users/anttiromppainen/Desktop/Ches
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/board.h \
+  /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/renderGraphics.h \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2614,8 +2614,8 @@ CMakeFiles/ChessProject.dir/src/main.cpp.o: /Users/anttiromppainen/Desktop/Chess
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdarg.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
-  /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/board.h \
   /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/gameController.h \
+  /Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/renderGraphics.h \
   /opt/homebrew/include/SFML/Config.hpp \
   /opt/homebrew/include/SFML/Graphics.hpp \
   /opt/homebrew/include/SFML/Graphics/BlendMode.hpp \
@@ -2797,8 +2797,6 @@ CMakeFiles/ChessProject.dir/src/main.cpp.o: /Users/anttiromppainen/Desktop/Chess
 /opt/homebrew/include/SFML/Graphics.hpp:
 
 /opt/homebrew/include/SFML/Config.hpp:
-
-/Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/board.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h:
 
@@ -4045,6 +4043,8 @@ CMakeFiles/ChessProject.dir/src/main.cpp.o: /Users/anttiromppainen/Desktop/Chess
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/bit_log2.h:
+
+/Users/anttiromppainen/Desktop/ChessProject/HeaderFiles/renderGraphics.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/pair.h:
 

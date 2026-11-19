@@ -10,7 +10,7 @@
     TODO
 */
 
-class renderBoard {
+class renderGraphics{
 
     private:
     // Variables
@@ -31,8 +31,8 @@ class renderBoard {
 
     // Constructor & destructor
     public:
-        renderBoard();
-        virtual ~renderBoard();
+        renderGraphics();
+        virtual ~renderGraphics();
 
     // Accessors
     

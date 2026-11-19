@@ -1,7 +1,7 @@
-#include "board.h"
+#include "renderGraphics.h"
 #include <iostream>
 
-void renderBoard::initVariables() {
+void renderGraphics::initVariables() {
     this -> board = initBoard();
     this -> piece = initPiece();
 }
@@ -15,7 +15,7 @@ void renderBoard::initVariables() {
  * in alternating chess board color scheme.
  */
 
-std::vector<sf::RectangleShape> renderBoard::initBoard() {
+std::vector<sf::RectangleShape> renderGraphics::initBoard() {
     std::vector<sf::RectangleShape> board; // TODO looks funky, compare to initWindow
     float squareOffset {87.5};
     this -> square.setSize(sf::Vector2(87.5f, 87.5f));
@@ -51,7 +51,7 @@ std::vector<sf::RectangleShape> renderBoard::initBoard() {
 }
 
 // TODO NOT A PART OF THE BOARD
-sf::RectangleShape renderBoard::initPiece() {
+sf::RectangleShape renderGraphics::initPiece() {
 
     sf::RectangleShape piece;
     piece.setFillColor(sf::Color::Green);
@@ -62,12 +62,12 @@ sf::RectangleShape renderBoard::initPiece() {
 }
 
 // Constructors & Destructor
-renderBoard::renderBoard() {
+renderGraphics::renderGraphics() {
     this -> initVariables();
     this -> initPiece();
 }
 
-renderBoard::~renderBoard() {
+renderGraphics::~renderGraphics() {
 }
 
 
@@ -87,7 +87,7 @@ void renderBoard::drawPiece() {
 
 
 
-void renderBoard::render() {
+void renderGraphics::render() {
 //    this -> window -> clear(sf::Color::Black);
 
 //    this -> drawSquares();

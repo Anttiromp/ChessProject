@@ -1,11 +1,11 @@
-#include "board.h"
+#include "renderGraphics.h"
 #include "gameController.h"
 #include <iostream>
 
 int main() {
 
     // Initialize
-    renderBoard board;
+    renderGraphics graphics;
     gameController game;
 
     // Game loop
@@ -14,7 +14,7 @@ int main() {
         game.update();
 
         // Render
-        board.render();
+        graphics.render();
 
     }
 
