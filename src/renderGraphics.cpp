@@ -2,6 +2,7 @@
 #include "gameController.h"
 #include <iostream>
 
+
 void renderGraphics::initVariables() {
     this -> board = initBoard();
     this -> piece = initPiece();
@@ -73,21 +74,18 @@ renderGraphics::~renderGraphics() {
 
 
 
-/*
-void renderBoard::drawSquares() {
+void renderGraphics::drawSquares(sf::RenderWindow& window) {
     for (int i {0}; i < board.size(); i++) {
-        this -> window -> draw(board[i]);
+        window.draw(board[i]);
     }
 }
-*/
 
 
 
-void renderGraphics::render() {
+void renderGraphics::render(sf::RenderWindow& window) {
 
-//    this -> drawSquares();
+    this -> drawSquares(window);
 
 //    this -> drawPiece();
 
- //   game.getWindow().display();
 }

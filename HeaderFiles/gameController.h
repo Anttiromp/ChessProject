@@ -15,6 +15,7 @@ private:
 // Private functions 
     void initWindow();
     
+    
 
 
 public:
@@ -22,6 +23,7 @@ public:
     ~gameController();
 
     const bool running() const;
+    sf::RenderWindow& getWindow();
 
     void pollEvents();
     void getMousePosition();

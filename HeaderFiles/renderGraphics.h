@@ -14,7 +14,7 @@ class renderGraphics{
 
     private:
     // Variables
-        std::vector<sf::RectangleShape> board; // TODO tämän koko tiedetään alusta alkaen, voidaan laittaa maksimikokoon 
+    std::vector<sf::RectangleShape> board; // TODO tämän koko tiedetään alusta alkaen, voidaan laittaa maksimikokoon 
         
     
 
@@ -39,8 +39,8 @@ class renderGraphics{
     // Functions
     
  //   void update();
-    void render();
-  //  void drawSquares();
+    void render(sf::RenderWindow&);
+    void drawSquares(sf::RenderWindow&);
     // TODO Might need to be on their on class?
     sf::RectangleShape getPiece();
 
