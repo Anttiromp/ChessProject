@@ -17,18 +17,10 @@ const bool gameController::running() const {
 
 gameController::gameController() 
     : window(sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close)),
-    renderer(window)
-    {
+    renderer(window) {
 
     }
 
-/*
-
-
-gameController::gameController() {
-    this -> initWindow();
-}
-    */
 
 
 gameController::~gameController() {
@@ -67,7 +59,6 @@ void gameController::update() {
     renderer.render();
 
     this -> pollEvents();
-    this -> getMousePosition();
 
 
     window.display();

@@ -52,7 +52,6 @@ std::vector<sf::RectangleShape> renderGraphics::initBoard() {
     return board;
 }
 
-// TODO NOT A PART OF THE BOARD
 sf::RectangleShape renderGraphics::initPiece() {
 
     sf::RectangleShape piece;
@@ -65,16 +64,9 @@ sf::RectangleShape renderGraphics::initPiece() {
 
 renderGraphics::renderGraphics(sf::RenderWindow& window)
     : window(window) {
-        // Other intialize stuff here
+        this -> initVariables();
 }
-/*
-// Constructors & Destructor
-renderGraphics::renderGraphics(sf::RenderWindow& window) {
-    : window (window);
-    this -> initVariables();
-    this -> initPiece();
-}
-    */
+
 
 renderGraphics::~renderGraphics() {
 }
