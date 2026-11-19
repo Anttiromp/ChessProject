@@ -22,9 +22,6 @@ void gameController::initWindow() {
     this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
 }
 
-sf::RenderWindow& gameController::getWindow() {
-    return *this -> window;
-}
 
 const bool gameController::running() const {
     return this -> window -> isOpen();
@@ -71,7 +68,6 @@ void gameController::update() {
 
     this->pollEvents();
     this -> getMousePosition();
-    graphics.drawPiece();
 
     this -> window -> display();
 

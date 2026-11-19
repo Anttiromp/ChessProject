@@ -42,7 +42,6 @@ class renderGraphics{
     void render();
   //  void drawSquares();
     // TODO Might need to be on their on class?
-    void drawPiece();
     sf::RectangleShape getPiece();
 
 };

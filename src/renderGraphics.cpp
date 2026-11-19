@@ -81,18 +81,9 @@ void renderBoard::drawSquares() {
 }
 */
 
-gameController game;
-
-void renderGraphics::drawPiece() {
-    game.getWindow().draw(piece);
- //   game.getWindow() ->draw(piece);
-
-}
-
 
 
 void renderGraphics::render() {
-    game.getWindow().clear(sf::Color::Black);
 
 //    this -> drawSquares();
 
