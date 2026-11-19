@@ -527,6 +527,30 @@ src/board.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/board.cpp.s
 .PHONY : src/board.cpp.s
 
+src/gameController.o: src/gameController.cpp.o
+.PHONY : src/gameController.o
+
+# target to build an object file
+src/gameController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/gameController.cpp.o
+.PHONY : src/gameController.cpp.o
+
+src/gameController.i: src/gameController.cpp.i
+.PHONY : src/gameController.i
+
+# target to preprocess a source file
+src/gameController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/gameController.cpp.i
+.PHONY : src/gameController.cpp.i
+
+src/gameController.s: src/gameController.cpp.s
+.PHONY : src/gameController.s
+
+# target to generate assembly for a file
+src/gameController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChessProject.dir/build.make CMakeFiles/ChessProject.dir/src/gameController.cpp.s
+.PHONY : src/gameController.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -592,6 +616,9 @@ help:
 	@echo "... src/board.o"
 	@echo "... src/board.i"
 	@echo "... src/board.s"
+	@echo "... src/gameController.o"
+	@echo "... src/gameController.i"
+	@echo "... src/gameController.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

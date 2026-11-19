@@ -1,15 +1,17 @@
 #include "board.h"
+#include "gameController.h"
 #include <iostream>
 
 int main() {
 
     // Initialize
     renderBoard board;
+    gameController game;
 
     // Game loop
-    while (board.running() ) {
+    while (game.running() ) {
         // Update
-        board.update();
+        game.update();
 
         // Render
         board.render();

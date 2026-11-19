@@ -2,14 +2,11 @@
 #include <iostream>
 
 void renderBoard::initVariables() {
-    this -> window = nullptr;
     this -> board = initBoard();
     this -> piece = initPiece();
 }
 
-void renderBoard::initWindow() {
-    this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
-}
+
 /**
  * @return Vector containing different colored squares 
  * 
@@ -67,49 +64,15 @@ sf::RectangleShape renderBoard::initPiece() {
 // Constructors & Destructor
 renderBoard::renderBoard() {
     this -> initVariables();
-    this -> initWindow();
     this -> initPiece();
 }
 
 renderBoard::~renderBoard() {
-    delete this -> window;
-}
-
-const bool renderBoard::running() const {
-    return this -> window -> isOpen();
 }
 
 
-void renderBoard::getMousePosition() {
-    this -> mousePosWindow = sf::Mouse::getPosition(*this -> window);
-    this -> mousePosView = this -> window -> mapPixelToCoords(this -> mousePosWindow);
-}
 
-
-// Functions
-void renderBoard::pollEvents() {
-    // Event polling
-    while (const std::optional event = window -> pollEvent() )
-    {
-        if (event -> is <sf::Event::Closed>())
-        {
-            window -> close();
-            break;
-        }
-
-
-        }
-    }
-
-
-
-
-void renderBoard::update() {
-    this->pollEvents();
-    this -> getMousePosition();
-
-}
-
+/*
 void renderBoard::drawSquares() {
     for (int i {0}; i < board.size(); i++) {
         this -> window -> draw(board[i]);
@@ -120,27 +83,17 @@ void renderBoard::drawPiece() {
     this -> window->draw(piece);
 
 }
+    */
 
-void renderBoard::movePiece() {
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        this -> piece.setPosition(mousePosView);
-        /*
-        if (this -> piece.getGlobalBounds().contains(this -> mousePosView)) {
-            this -> piece.setPosition(mousePosView);
-        }
-            */
-    }
-}
 
 
 void renderBoard::render() {
-    this -> window -> clear(sf::Color::Black);
+//    this -> window -> clear(sf::Color::Black);
 
-    this -> drawSquares();
+//    this -> drawSquares();
 
-    this -> drawPiece();
+//    this -> drawPiece();
 
-    this -> movePiece();
 
-    this -> window -> display();
+//    this -> window -> display();
 }
