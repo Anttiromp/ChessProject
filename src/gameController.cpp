@@ -2,14 +2,6 @@
 #include "renderGraphics.h"
 
 
-/*
-void gameController::initWindow() {
-    this -> window = new sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close);
-}
-    */
-
-
-
 const bool gameController::running() const {
     return window.isOpen();
 
