@@ -38,7 +38,6 @@ public:
     void pollEvents();
     sf::Vector2f getMousePosition();
     void update();
-    void printSquare();
     std::bitset<64> setSquare(std::bitset<64>);
 };
 

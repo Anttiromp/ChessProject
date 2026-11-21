@@ -39,14 +39,15 @@ void gameController::pollEvents() {
             break;
         }
 
-        printSquare();
+        if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
+            this -> board = setSquare(board);
+        }
+
         }
     }
 /**
- * Function sets a bit, 0.5f value is added to always get neares full integer when clicked in order to index bit
- * To get correct index in the bitboard, row is * 8 (board is 8x8) and result is then 
- * TODO replace magic numbers with descriptive variables
- * 
+ * Function sets a bit, by counting index for rows & columns on the board, and setting the correspoding bitIndex to 1
+ * @returns bitset<64> Variable containing set bits in the board bitboard-representation
  * TODO check if within window bounds
  */
 
@@ -59,16 +60,6 @@ std::bitset<64> gameController::setSquare(std::bitset<64> bitBoard) {
     std::cout << "Bitboard after set: " << bitBoard << '\n';
 
     return bitBoard;
-}
-
-
-void gameController::printSquare() {
-    if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        this -> setSquare(board);
-        std::cout << "Bitboard: " << board << '\n'; // TODO can be deleted at the end
-        
-        
-    }
 }
 
 
