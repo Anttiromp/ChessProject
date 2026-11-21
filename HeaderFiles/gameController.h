@@ -11,7 +11,7 @@ private:
     sf::RenderWindow window;
     std::optional<sf::Event> event;
     renderGraphics renderer;
-    std::bitset <64> board {};
+    std::bitset <64> board;
     float squareSize {};
 
     sf::Vector2i mousePosWindow;
@@ -39,7 +39,7 @@ public:
     sf::Vector2f getMousePosition();
     void update();
     void printSquare();
-    void setSquare();
+    std::bitset<64> setSquare(std::bitset<64>);
 };
 
 

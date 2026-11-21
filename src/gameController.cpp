@@ -4,6 +4,7 @@
 
 void gameController::initVariables() {
     this -> squareSize = {87.5};
+    this -> board = {};
 }
 
 const bool gameController::running() const {
@@ -41,19 +42,31 @@ void gameController::pollEvents() {
         printSquare();
         }
     }
+/**
+ * Function sets a bit, 0.5f value is added to always get neares full integer when clicked in order to index bit
+ * To get correct index in the bitboard, row is * 8 (board is 8x8) and result is then 
+ * TODO replace magic numbers with descriptive variables
+ * 
+ * TODO check if within window bounds
+ */
 
-void gameController::setSquare() {
-    float file = std::round ((getMousePosition().x/squareSize) + 0.5f);
-    float row = std::round ( (getMousePosition().y/squareSize) + 0.5f);
-    std::cout << "Clicked file: " << file << " row: " << row << '\n';
+std::bitset<64> gameController::setSquare(std::bitset<64> bitBoard) {
+    int file = (getMousePosition().x/squareSize);
+    int row = (getMousePosition().y/squareSize);
+    int bitIndex = (row * 8) + file;
+    std::cout << "Clicked file: " << file << " row: " << row << '\n'; // TODO not needeed when done
+    bitBoard.set(bitIndex);
+    std::cout << "Bitboard after set: " << bitBoard << '\n';
+
+    return bitBoard;
 }
 
 
 void gameController::printSquare() {
     if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        std::cout << "Mouse position: " << getMousePosition().x << " " <<  getMousePosition().y << '\n';
+        this -> setSquare(board);
         std::cout << "Bitboard: " << board << '\n'; // TODO can be deleted at the end
-        this -> setSquare();
+        
         
     }
 }
