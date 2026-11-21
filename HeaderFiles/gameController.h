@@ -32,9 +32,9 @@ public:
     const bool running() const;
 
     void pollEvents();
-    void getMousePosition();
+    sf::Vector2f getMousePosition();
     void update();
-   // void movePiece();
+    void printSquare();
 };
 
 

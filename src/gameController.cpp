@@ -1,5 +1,6 @@
 #include "gameController.h"
 #include "renderGraphics.h"
+#include <iostream>
 
 
 const bool gameController::running() const {
@@ -19,9 +20,10 @@ gameController::~gameController() {
     window.close();
 }
 
-void gameController::getMousePosition() {
- //   this -> mousePosWindow = sf::Mouse::getPosition(*this -> window);
-  //  this -> mousePosView = this -> window -> mapPixelToCoords(this -> mousePosWindow);
+sf::Vector2f gameController::getMousePosition() {
+    this -> mousePosWindow = sf::Mouse::getPosition(window);
+    this -> mousePosView = this -> window.mapPixelToCoords(this -> mousePosWindow);
+    return mousePosView;
 }
 
 
@@ -34,16 +36,15 @@ void gameController::pollEvents() {
             break;
         }
 
+        printSquare();
         }
     }
 
-/*
-void gameController::movePiece() {
+void gameController::printSquare() {
     if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
-        this -> piece.setPosition(mousePosView);
+        std::cout << "Mouse position: " << getMousePosition().x << " " <<  getMousePosition().y << '\n';
     }
 }
-    */
 
 
 void gameController::update() {
