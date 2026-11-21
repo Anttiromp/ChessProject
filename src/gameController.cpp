@@ -2,6 +2,9 @@
 #include "renderGraphics.h"
 #include <iostream>
 
+void gameController::initVariables() {
+    this -> squareSize = {87.5};
+}
 
 const bool gameController::running() const {
     return window.isOpen();
@@ -11,10 +14,9 @@ const bool gameController::running() const {
 gameController::gameController() 
     : window(sf::RenderWindow(sf::VideoMode({700, 700}), "Chessboard", sf::Style::Titlebar | sf::Style::Close)),
     renderer(window) {
+        gameController::initVariables();
 
     }
-
-
 
 gameController::~gameController() {
     window.close();
@@ -40,9 +42,19 @@ void gameController::pollEvents() {
         }
     }
 
+void gameController::setSquare() {
+    float file = std::round ((getMousePosition().x/squareSize) + 0.5f);
+    float row = std::round ( (getMousePosition().y/squareSize) + 0.5f);
+    std::cout << "Clicked file: " << file << " row: " << row << '\n';
+}
+
+
 void gameController::printSquare() {
     if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left)) {
         std::cout << "Mouse position: " << getMousePosition().x << " " <<  getMousePosition().y << '\n';
+        std::cout << "Bitboard: " << board << '\n'; // TODO can be deleted at the end
+        this -> setSquare();
+        
     }
 }
 

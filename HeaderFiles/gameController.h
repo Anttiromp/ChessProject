@@ -1,7 +1,8 @@
 #ifndef GAMECONTROLLER_H
 #define GAMECONTROLLER_H
-#include <SFML/Graphics.hpp>
+
 #include "renderGraphics.h"
+#include <bitset>
 
 class gameController {
 
@@ -10,19 +11,22 @@ private:
     sf::RenderWindow window;
     std::optional<sf::Event> event;
     renderGraphics renderer;
-    
+    std::bitset <64> board {};
+    float squareSize {};
 
     sf::Vector2i mousePosWindow;
     sf::Vector2f mousePosView;
 
 // Private functions 
     void initWindow();
+    void initVariables();
     
     
 
 
 public:
     // Variables
+    
 
 
     // Functions
@@ -35,6 +39,7 @@ public:
     sf::Vector2f getMousePosition();
     void update();
     void printSquare();
+    void setSquare();
 };
 
 
